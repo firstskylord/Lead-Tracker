@@ -1,7 +1,7 @@
 let leadArray = [];
 const inputField = document.getElementById("inputField");
 const saveLead = document.getElementById("saveButton");
-const urlSaveLead = document.getElementById("urlSaveButton");
+const tabSaveLead = document.getElementById("tabSaveButton");
 const dltLeads = document.getElementById("dltButton");
 let unOrdList = document.getElementById("unOrdListofLeads");
 
@@ -9,7 +9,34 @@ const leadsFromLocal = JSON.parse(localStorage.getItem("leadArray"));
 
 if (leadsFromLocal) {
   leadArray = leadsFromLocal;
-  renderLeads();
+  render(leadArray);
+}
+
+const tabs = [
+  {
+    url: "https://www.linkedin.com/in/ajiteshgo",
+  },
+];
+
+tabSaveLead.addEventListener("click", function () {
+  leadArray.push(tabs[0].url);
+  localStorage.setItem("leadArray", JSON.stringify(leadArray));
+  render(leadArray);
+});
+
+function render(leads) {
+  let listItems = "";
+  for (let i = 0; i < leads.length; i++) {
+    listItems += `
+    <li>
+        Lead ${i + 1}:
+        <a target = "_blank" href = "${leads[i]}">
+            ${leads[i]}
+        </a>
+    </li>`;
+  }
+
+  unOrdList.innerHTML = listItems;
 }
 
 saveLead.addEventListener("click", function () {
@@ -18,28 +45,11 @@ saveLead.addEventListener("click", function () {
 
   localStorage.setItem("leadArray", JSON.stringify(leadArray));
 
-  renderLeads();
-
-  console.log(localStorage.getItem("leadArray"));
+  render(leadArray);
 });
-
-function renderLeads() {
-  let listItems = "";
-  for (let i = 0; i < leadArray.length; i++) {
-    listItems += `
-    <li>
-        Lead ${i + 1}:
-        <a target = "_blank" href = "${leadArray[i]}">
-            ${leadArray[i]}
-        </a>
-    </li>`;
-  }
-
-  unOrdList.innerHTML = listItems;
-}
 
 dltLeads.addEventListener("dblclick", function () {
   localStorage.clear();
   leadArray = [];
-  renderLeads();
+  render(leadArray);
 });
