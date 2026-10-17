@@ -27,6 +27,12 @@ body {
   gap: 12px;
 }
 
+.buttonContainer #dltButton {
+  border: 1px solid #5f9341;
+  background-color: white;
+  color: #5f9341;
+}
+
 input {
   width: 100%;
   padding: 5px;

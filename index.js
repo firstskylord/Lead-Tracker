@@ -1,15 +1,26 @@
 let leadArray = [];
 const inputField = document.getElementById("inputField");
 const saveLead = document.getElementById("saveButton");
+const urlSaveLead = document.getElementById("urlSaveButton");
+const dltLeads = document.getElementById("dltButton");
 let unOrdList = document.getElementById("unOrdListofLeads");
+
+const leadsFromLocal = JSON.parse(localStorage.getItem("leadArray"));
+
+if (leadsFromLocal) {
+  leadArray = leadsFromLocal;
+  renderLeads();
+}
 
 saveLead.addEventListener("click", function () {
   leadArray.push(inputField.value);
-  console.log(leadArray);
+  inputField.value = "";
+
+  localStorage.setItem("leadArray", JSON.stringify(leadArray));
 
   renderLeads();
 
-  inputField.value = "";
+  console.log(localStorage.getItem("leadArray"));
 });
 
 function renderLeads() {
@@ -26,3 +37,9 @@ function renderLeads() {
 
   unOrdList.innerHTML = listItems;
 }
+
+dltLeads.addEventListener("dblclick", function () {
+  localStorage.clear();
+  leadArray = [];
+  renderLeads();
+});
