@@ -32,13 +32,3 @@ Lead Tracker started as a learning project inspired by Scrimba. The goal is to m
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Browser Extension APIs](https://img.shields.io/badge/Browser%20Extension%20APIs-brightgreen?style=for-the-badge&logo=chromewebstore&logoColor=white)
-
-## What I Learned
-
-This project helped me practice:
-
-- Building a user interface for browsers extensions with HTML and CSS.
-- Handling user interactions with JavaScript.
-- Working with browser extension APIs.
-- Capturing the current browser tab's URL.
-- Managing a collection of saved leads.
