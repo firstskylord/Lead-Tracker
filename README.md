@@ -1,8 +1,5 @@
 # Lead Tracker
 
-A lightweight browser extension for saving and managing potential clients and leads while browsing the web.
-It features a minimal, straightforward UI designed to make saving leads quick and easy.
-
 Lead Tracker started as a learning project inspired by Scrimba. The goal is to make it easier to keep track of interesting opportunities without having to manually copy links into another application.
 
 ## Features
