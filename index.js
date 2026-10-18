@@ -12,16 +12,20 @@ if (leadsFromLocal) {
   render(leadArray);
 }
 
-const tabs = [
-  {
-    url: "https://www.linkedin.com/in/ajiteshgo",
-  },
-];
-
 tabSaveLead.addEventListener("click", function () {
-  leadArray.push(tabs[0].url);
-  localStorage.setItem("leadArray", JSON.stringify(leadArray));
-  render(leadArray);
+  // Fetching Tab URL from Chrome
+  // Source - https://stackoverflow.com/a/17826527
+
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    console.log(tabs);
+    // since only one tab should be active and in the current window at once
+    // the return variable should only have one entry
+    // The chrome.tabs API works only in the context of Chrome extension
+    // so browser console shows an error
+    leadArray.push(tabs[0].url);
+    localStorage.setItem("leadArray", JSON.stringify(leadArray));
+    render(leadArray);
+  });
 });
 
 function render(leads) {
