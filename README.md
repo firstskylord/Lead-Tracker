@@ -10,7 +10,8 @@ Lead Tracker started as a learning project inspired by Scrimba. The goal is to m
 
 ## Preview
 
-<img width="332" height="432" alt="Screenshot 2026-10-18 at 12 30 13" src="https://github.com/user-attachments/assets/d134cd5a-996e-49f0-9715-2a2c695574e3" />
+<img width="343" height="444" alt="Screenshot 2026-10-18 at 16 36 38" src="https://github.com/user-attachments/assets/30d6fe12-c96e-4c11-8195-114113096d05" />
+
 
 ## Getting Started
 
