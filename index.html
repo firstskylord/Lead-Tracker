@@ -10,11 +10,19 @@
   </head>
   <body>
     <div class="inputContainer">
-      <input type="text" id="inputField" />
+      <input type="text" id="inputField" placeholder="Enter Lead URL" />
       <div class="buttonContainer">
         <button id="saveButton">Save Lead</button>
         <button id="tabSaveButton">Save Tab</button>
-        <button id="dltButton">Delete All</button>
+        <div class="dltContainer">
+          <input
+            type="number"
+            id="dltField"
+            placeholder="Enter Lead number to delete"
+          />
+          <button id="dltButton">Delete</button>
+          <button id="dltAllButton">Delete All</button>
+        </div>
       </div>
     </div>
     <ul id="unOrdListofLeads"></ul>

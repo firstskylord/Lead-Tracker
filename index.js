@@ -2,7 +2,9 @@ let leadArray = [];
 const inputField = document.getElementById("inputField");
 const saveLead = document.getElementById("saveButton");
 const tabSaveLead = document.getElementById("tabSaveButton");
+const dltField = document.getElementById("dltField");
 const dltLeads = document.getElementById("dltButton");
+const dltAllLeads = document.getElementById("dltAllButton");
 let unOrdList = document.getElementById("unOrdListofLeads");
 
 const leadsFromLocal = JSON.parse(localStorage.getItem("leadArray"));
@@ -32,7 +34,7 @@ function render(leads) {
   let listItems = "";
   for (let i = 0; i < leads.length; i++) {
     listItems += `
-    <li>
+    <li class="leadItem">
         Lead ${i + 1}:
         <a target = "_blank" href = "${leads[i]}">
             ${leads[i]}
@@ -52,7 +54,16 @@ saveLead.addEventListener("click", function () {
   render(leadArray);
 });
 
-dltLeads.addEventListener("dblclick", function () {
+dltLeads.addEventListener("click", function () {
+  const index = dltField.value - 1;
+  if (index !== -1) {
+    leadArray.splice(index, 1);
+  }
+  localStorage.setItem("leadArray", JSON.stringify(leadArray));
+  render(leadArray);
+});
+
+dltAllLeads.addEventListener("dblclick", function () {
   localStorage.clear();
   leadArray = [];
   render(leadArray);
