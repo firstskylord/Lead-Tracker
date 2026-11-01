@@ -2,7 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap");
 
-/* CSS */
+/* Above Lists CSS */
 
 html,
 body {
@@ -41,7 +41,7 @@ body {
 
 .dltContainer #dltButton,
 .dltContainer #dltAllButton {
-  border: 1px solid #408a71;
+  border: none;
   background-color: #e7fff4;
   color: #408a71;
 }
@@ -79,6 +79,14 @@ button {
   background-color: #408a71;
   border: none;
 }
+
+.dltContainer #dltButton:disabled {
+  border: none;
+  background-color: #e7fff4cf;
+  color: #5ac5a19b;
+}
+
+/* Lists CSS */
 
 ul {
   list-style: none;

@@ -54,6 +54,19 @@ saveLead.addEventListener("click", function () {
   render(leadArray);
 });
 
+inputField.addEventListener("keydown", (event) => {
+  if (inputField.value != "") {
+    if (event.key === "Enter") {
+      leadArray.push(inputField.value);
+      inputField.value = "";
+
+      localStorage.setItem("leadArray", JSON.stringify(leadArray));
+
+      render(leadArray);
+    }
+  }
+});
+
 dltLeads.addEventListener("click", function () {
   const index = dltField.value - 1;
   if (index !== -1) {
@@ -61,6 +74,12 @@ dltLeads.addEventListener("click", function () {
   }
   localStorage.setItem("leadArray", JSON.stringify(leadArray));
   render(leadArray);
+  dltField.value = "";
+
+  dltLeads.disabled = true;
+  setTimeout(() => {
+    dltLeads.disabled = false;
+  }, 3000);
 });
 
 dltAllLeads.addEventListener("dblclick", function () {
