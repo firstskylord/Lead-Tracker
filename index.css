@@ -29,6 +29,10 @@ body {
   margin: 0 2rem;
 }
 
+.Hero a {
+  cursor: pointer;
+}
+
 .inputPlace {
   display: flex;
   gap: 0.25rem;
