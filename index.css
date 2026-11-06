@@ -25,7 +25,8 @@ body {
 .Hero {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 0 2rem;
 }
 
 .inputPlace {
@@ -73,7 +74,7 @@ input::placeholder {
 }
 
 input:focus {
-  width: 100%;
+  width: 62%;
   padding: 7px;
   margin-bottom: 10px;
   box-sizing: border-box;
