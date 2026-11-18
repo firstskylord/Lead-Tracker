@@ -67,7 +67,7 @@ input {
 }
 
 input::placeholder {
-  color: #408a71;
+  color: #408a71b3;
   opacity: 1;
 }
 
@@ -88,12 +88,14 @@ button {
   color: #e7fff4;
   background-color: #408a71;
   border: none;
+  cursor: pointer;
 }
 
 .dltContainer #dltButton:disabled {
   border: none;
-  background-color: #e7fff4cf;
-  color: #5ac5a19b;
+  background-color: #edf2f0;
+  color: #8fa39c;
+  cursor: not-allowed;
 }
 
 /* Lists CSS */
@@ -105,4 +107,27 @@ ul {
 
 ul li a {
   color: #408a71;
+}
+
+.leadItem {
+  padding-bottom: 0.5rem;
+}
+
+.leadNote {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  font-family: "Shippori Antique B1", Arial, sans-serif;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  resize: none;
+}
+
+.leadNote::placeholder {
+  color: #408a71b3;
+  opacity: 1;
+}
+
+.leadNote:focus {
+  border-radius: 4px;
 }

@@ -34,12 +34,15 @@ function render(leads) {
   let listItems = "";
   for (let i = 0; i < leads.length; i++) {
     listItems += `
-    <li class="leadItem">
-        Lead ${i + 1}:
-        <a target = "_blank" href = "${leads[i]}">
-            ${leads[i]}
-        </a>
-    </li>`;
+    <div class = "leadItems">
+      <li class="leadItem">
+          Lead ${i + 1}:
+          <a target = "_blank" href = "${leads[i]}">
+              ${leads[i]}
+          </a>
+      </li>
+      <textarea class = "leadNote" rows = "2" cols = "50" placeholder = "Enter notes about the Lead"></textarea>
+    </div>`;
   }
 
   unOrdList.innerHTML = listItems;
