@@ -5,6 +5,7 @@ const tabSaveLead = document.getElementById("tabSaveButton");
 const dltField = document.getElementById("dltField");
 const dltLeads = document.getElementById("dltButton");
 const dltAllLeads = document.getElementById("dltAllButton");
+const noteField = document.getElementById("leadNote");
 let unOrdList = document.getElementById("unOrdListofLeads");
 
 const leadsFromLocal = JSON.parse(localStorage.getItem("leadArray"));
@@ -41,7 +42,7 @@ function render(leads) {
               ${leads[i]}
           </a>
       </li>
-      <textarea class = "leadNote" rows = "2" cols = "50" placeholder = "Enter notes about the Lead"></textarea>
+      <textarea id = "leadNote" rows = "2" cols = "50" placeholder = "Enter notes about the Lead"></textarea>
     </div>`;
   }
 

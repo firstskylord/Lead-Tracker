@@ -113,21 +113,22 @@ ul li a {
   padding-bottom: 0.5rem;
 }
 
-.leadNote {
+#leadNote {
   padding: 0.5rem;
   outline: none;
   border: none;
   font-family: "Shippori Antique B1", Arial, sans-serif;
+  font-size: smaller;
   margin-bottom: 0.5rem;
   border-radius: 4px;
   resize: none;
 }
 
-.leadNote::placeholder {
+#leadNote::placeholder {
   color: #408a71b3;
   opacity: 1;
 }
 
-.leadNote:focus {
+#leadNote:focus {
   border-radius: 4px;
 }
